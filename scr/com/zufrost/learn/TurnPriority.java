@@ -16,6 +16,6 @@ public class TurnPriority {
     }
 
     public static boolean isPcPlayerTurn() {
-        return  turnCounter % 2 == 0;
+        return turnCounter % 2 == 0;
     }
 }

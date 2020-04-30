@@ -7,15 +7,16 @@ public class DisplayMessage {
     }
 
     public static void showTurnCounter() {
-        System.out.println("Ход номер "+TurnPriority.getTurnCounter());
+        System.out.println("Ход номер " + TurnPriority.getTurnCounter());
     }
 
     public static void showIsPcPlayerTurn() {
-        System.out.println("Ход компьютера? "+TurnPriority.isPcPlayerTurn());
+        System.out.println("Ход компьютера? " + TurnPriority.isPcPlayerTurn());
     }
 
-
-
+    public static void showGameStart() {
+        System.out.println("Игра начинается. На столе находится " + Matches.getMatchesQuantity() + " спичек");
+    }
 
 
 }
