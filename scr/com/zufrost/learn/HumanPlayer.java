@@ -12,12 +12,17 @@ public class HumanPlayer {
 
         if (count == 1) {
             Matches.takeOneMatch();
+            TurnPriority.nextTurnCounter();
         } else if (count == 2) {
             Matches.takeTwoMatches();
-        } else {
+            TurnPriority.nextTurnCounter();
+        } else if (count == 3) {
             Matches.takeThreeMatches();
+            TurnPriority.nextTurnCounter();
+        } else {
+            System.out.println("Некорректное значение спичек, выберете одну, две или три спички");;
         }
 
-        TurnPriority.nextTurnCounter();
+
     }
 }
