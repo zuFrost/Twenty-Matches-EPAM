@@ -8,7 +8,12 @@ public class HumanPlayer {
         System.out.println("Человек ходит");
         System.out.print("Ход человека. Введите количество спичек: ");
         Scanner scanner = new Scanner(System.in);
-        int count = scanner.nextInt();
+//        int count = scanner.nextInt();
+        int count = 0;
+
+        if (scanner.hasNextInt()) {
+            count = scanner.nextInt();
+        }
 
         if (count == 1) {
             Matches.takeOneMatch();
@@ -20,9 +25,7 @@ public class HumanPlayer {
             Matches.takeThreeMatches();
             TurnPriority.nextTurnCounter();
         } else {
-            System.out.println("Некорректное значение спичек, выберете одну, две или три спички");;
+            System.out.println("Некорректное значение спичек, выберете 1, 2 или 3 спички");;
         }
-
-
     }
 }
